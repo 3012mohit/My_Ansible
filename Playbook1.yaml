@@ -1,0 +1,16 @@
+--- 
+- hosts:  
+  become: yes
+  tasks:
+   - name: install git
+     dnf:
+       name: git
+       state: present
+
+   - name: install jenkins  
+     dnf: 
+      name: 
+       - java-11-openjdk
+       - jenkins
+      state: present
+      
